@@ -57,14 +57,17 @@ for (let i = 0; i < listItems.length; i++) {
 }
 
 // Завдання 2: Показ/сховати блок
-const toggleBtn = document.getElementById('toggleBtn');
-const description = document.getElementById('description');
-toggleBtn.addEventListener('click', () => {
-    if (description.style.display === 'none') {
-        description.style.display = 'block';
-    } else {
-        description.style.display = 'none';
-    }
+document.getElementById("toggleBtn").addEventListener("click", function () {
+  const description = document.getElementById("description");
+  const btn = document.getElementById("toggleBtn");
+
+  if (description.style.display === "none") {
+    description.style.display = "block";
+    btn.textContent = "Сховати опис платформи";
+  } else {
+    description.style.display = "none";
+    btn.textContent = "Показати опис платформи";
+  }
 });
 
 // Завдання 2: Обробка кнопок навігації
