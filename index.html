@@ -37,18 +37,6 @@
 
 <!-- JS код — обовʼязково в самому кінці перед </body> -->
 <script>
-    function toggleDetails(eventId) {
-        let content = document.getElementById(eventId);
-        let button = document.getElementById("btn-" + eventId);
-        if (content.style.display === "none") {
-            content.style.display = "block";
-            button.innerText = "Сховати";
-        } else {
-            content.style.display = "none";
-            button.innerText = "Детальніше";
-        }
-    }
-
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
     }
@@ -75,7 +63,6 @@
         });
     };
 </script>
-
     <section id="timeline" class="timeline">
         <h2>Хронологія історичних подій</h2>
         <button onclick="scrollToQuiz()">Пройти тест</button>
