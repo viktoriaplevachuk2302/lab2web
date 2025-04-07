@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Історична платформа</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function toggleDetails(eventId) {
-            let content = document.getElementById(eventId);
-            let button = document.getElementById("btn-" + eventId);
-            if (content.style.display === "none") {
-                content.style.display = "block";
-                button.innerText = "Сховати";
-            } else {
-                content.style.display = "none";
-                button.innerText = "Детальніше";
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <script src="script.js"></script>
-    
 
 <!-- Модальне вікно -->
 <div id="modal" style="display:none; position:fixed; top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6); z-index:1000;">
     <div style="background:white; padding:20px; margin:10% auto; width:80%; max-width:600px; border-radius:10px; position:relative;">
-      <h2 id="modal-title"></h2>
-      <p id="modal-text"></p>
-      <button onclick="closeModal()">Закрити</button>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+        <button onclick="closeModal()">Закрити</button>
     </div>
-  </div>
-  
+</div>
 
-    <header>
-        <h1>Платформа для вивчення історії</h1>
-        <nav>
-            <ul>
-                <li><a href="#timeline">Хронологія</a></li>
-                <li><a href="#events">Події</a></li>
-                <li><a href="#quiz">Тестування</a></li>
-            </ul>
-        </nav>
-    </header>
-</section>
+<header>
+    <h1>Платформа для вивчення історії</h1>
+    <nav>
+        <ul>
+            <li><a href="#timeline">Хронологія</a></li>
+            <li><a href="#events">Події</a></li>
+            <li><a href="#quiz">Тестування</a></li>
+        </ul>
+    </nav>
+</header>
+
 <section id="description-toggle">
-  <button id="toggleBtn">Показати опис платформи</button>
-  <p id="description" style="display: none;">
-    Ця платформа створена для вивчення ключових історичних подій України. Вона допомагає зрозуміти хронологію, причини та наслідки подій, а також перевірити знання за допомогою тестів.
-  </p>
+    <button id="toggleBtn">Показати опис платформи</button>
+    <p id="description" style="display: none;">
+        Ця платформа створена для вивчення ключових історичних подій України. Вона допомагає зрозуміти хронологію, причини та наслідки подій, а також перевірити знання за допомогою тестів.
+    </p>
+</section>
+
+<!-- JS код — обовʼязково в самому кінці перед </body> -->
+<script>
+    function toggleDetails(eventId) {
+        let content = document.getElementById(eventId);
+        let button = document.getElementById("btn-" + eventId);
+        if (content.style.display === "none") {
+            content.style.display = "block";
+            button.innerText = "Сховати";
+        } else {
+            content.style.display = "none";
+            button.innerText = "Детальніше";
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    function showModal(title, text) {
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-text').innerText = text;
+        document.getElementById('modal').style.display = 'block';
+    }
+
+    // Кнопка опису платформи
+    window.onload = function () {
+        const toggleBtn = document.getElementById("toggleBtn");
+        const description = document.getElementById("description");
+
+        toggleBtn.addEventListener("click", function () {
+            if (description.style.display === "none") {
+                description.style.display = "block";
+                toggleBtn.textContent = "Сховати опис платформи";
+            } else {
+                description.style.display = "none";
+                toggleBtn.textContent = "Показати опис платформи";
+            }
+        });
+    };
+</script>
+
     <section id="timeline" class="timeline">
         <h2>Хронологія історичних подій</h2>
         <button onclick="scrollToQuiz()">Пройти тест</button>
