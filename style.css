@@ -1,0 +1,302 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d1e3cfdf; /* Світлий фон */
+    overflow-x: hidden; /* Запобігає горизонтальній прокрутці */
+}
+
+/* === Шапка сайту === */
+header {
+    background: #2bb982; /* Основний фон */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* === Стилі для хронології подій === */
+.timeline {
+    text-align: center;
+    padding: 2rem;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Запобігає переходу подій на новий рядок */
+    overflow-x: auto; /* Горизонтальна прокрутка */
+    padding-bottom: 2rem;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-left: 5px solid #0c7313;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 15px;
+    height: 5px;
+    background-color: #d1e3cfdf;
+    border-radius: 5px;
+}
+/* === СЕКЦІЯ ІСТОРИЧНИХ ПОДІЙ === */
+#events {
+    text-align: center;
+    padding: 2rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#events h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* === Контейнер для подій === */
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 події в рядок */
+    gap: 30px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* === Оформлення картки події === */
+.event {
+    border: 1px solid #d1e3cfdf;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    text-align: center;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* === Збільшений розмір зображень === */
+.event img {
+    width: 100%;
+    max-width: 650px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* === Оформлення кнопок === */
+.event button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #179609;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.event button:hover {
+    background-color: #058903;
+}
+
+/* === Адаптивність === */
+@media (max-width: 1200px) {
+    .events-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 події в рядок */
+    }
+
+    .event img {
+        height: 450px; /* Зменшена висота на середніх екранах */
+    }
+}
+
+@media (max-width: 800px) {
+    .events-container {
+        grid-template-columns: 1fr; /* 1 подія в рядок */
+    }
+
+    .event img {
+        height: 400px; /* Зменшена висота на малих екранах */
+    }
+}
+
+/* === Футер === */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #d1e3cfdf;
+    color: white;
+}
+
+/* === СЕКЦІЯ ІСТОРИЧНИХ ПОДІЙ === */
+/* Центрування заголовка */
+#events {
+    text-align: center;
+    padding: 2rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: d1e3cfdf(40, 118, 92); /* Білий фон для подій */
+}
+
+#events h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* === Контейнер для подій === */
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 події в рядок */
+    gap: 40px;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* === Оформлення картки події === */
+.event {
+    border: 1px solid #296947;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    text-align: center;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* === Ще більше збільшені зображення === */
+.event img {
+    width: 100%;
+    max-width: 750px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* === Оформлення кнопок === */
+.event button {
+    margin-top: 15px;
+    padding: 12px 22px;
+    background-color: #179609;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.event button:hover {
+    background-color: #058903;
+}
+
+/* === Адаптивність === */
+@media (max-width: 1400px) {
+    .events-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 події в рядок */
+    }
+
+    .event img {
+        height: 500px; /* Зменшена висота на середніх екранах */
+    }
+}
+
+@media (max-width: 900px) {
+    .events-container {
+        grid-template-columns: 1fr; /* 1 подія в рядок */
+    }
+
+    .event img {
+        height: 450px; /* Зменшена висота на малих екранах */
+    }
+}
+
+/* === Футер === */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1aa345;
+    color: white;
+}
+
+#quiz {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.quiz-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #179609;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+button:hover {
+    background-color: #058903;
+}
