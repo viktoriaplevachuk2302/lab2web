@@ -300,3 +300,30 @@ button {
 button:hover {
     background-color: #058903;
 }
+#commentForm {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+#commentForm input,
+#commentForm textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+#commentForm button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+#commentSection {
+  max-width: 500px;
+  margin: 10px auto;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
