@@ -396,4 +396,26 @@
   <button type="submit">Надіслати</button>
 </form>
 <div id="commentSection"></div>
+    
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const events = document.querySelectorAll('.timeline-item');
+
+    events.forEach((eventBlock) => {
+      const dateText = eventBlock.querySelector('.date').innerText;
+      const startYear = parseInt(dateText.split('-')[0]);
+
+      if (startYear >= 2000) {
+        eventBlock.style.border = "2px solid red";
+        eventBlock.style.padding = "10px";
+      } else {
+        eventBlock.style.border = "2px solid lightgray";
+        eventBlock.style.padding = "10px";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
 
