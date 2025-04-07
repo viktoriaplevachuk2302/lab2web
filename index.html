@@ -43,14 +43,12 @@
             </ul>
         </nav>
     </header>
-    
+</section>
 <section id="description-toggle">
   <button id="toggleBtn">Показати опис платформи</button>
   <p id="description" style="display: none;">
     Ця платформа створена для вивчення ключових історичних подій України. Вона допомагає зрозуміти хронологію, причини та наслідки подій, а також перевірити знання за допомогою тестів.
   </p>
-</section>
-
     <section id="timeline" class="timeline">
         <h2>Хронологія історичних подій</h2>
         <button onclick="scrollToQuiz()">Пройти тест</button>
@@ -120,7 +118,7 @@
     
         <div class="event">
             <h3>Національно-визвольна війна (1648-1657)</h3>
-            <img src="Natsionalno-vyzvolna-vijna.jpg" alt="Богдан Хмельницький">
+            <img src="images/Natsionalno-vyzvolna-vijna.jpg" alt="Богдан Хмельницький">
             <button onclick="showModal('Національно-визвольна війна (1648-1657)', `Національно-визвольна війна українського народу 1648–1657 років була боротьбою 
             під проводом Богдана Хмельницького проти польського панування. Причинами стали соціальний і національний гніт, обмеження прав козаків та релігійні утиски.
             Військові успіхи козаків привели до створення Української козацької держави – Гетьманщини. У 1654 році була укладена Переяславська угода з Московією, яка змінила хід подій.
@@ -373,3 +371,15 @@
     </form>
     <p id="result"></p>
 </section> 
+    <!-- Кнопка прокрутки до коментарів -->
+<button id="scrollToComments" style="margin: 40px auto; display: block;">Коментарі</button>
+
+<!-- Коментарі -->
+<h3 id="comments-title">Залишити коментар</h3>
+<form id="commentForm">
+  <input type="text" id="name" placeholder="Ваше ім'я"><br>
+  <textarea id="comment" placeholder="Коментар"></textarea><br>
+  <button type="submit">Надіслати</button>
+</form>
+<div id="commentSection"></div>
+
