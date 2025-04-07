@@ -86,24 +86,31 @@ navButtons.forEach(btn => {
 });
 
 // Завдання 3: Коментарі
+// Перехід до коментарів
+document.getElementById("scrollToComments").addEventListener("click", function () {
+  document.getElementById("comments").scrollIntoView({ behavior: "smooth" });
+});
+
+// Коментарі
 const form = document.getElementById('commentForm');
 const nameInput = document.getElementById('name');
 const commentInput = document.getElementById('comment');
 const commentSection = document.getElementById('commentSection');
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = nameInput.value.trim();
-    const comment = commentInput.value.trim();
+  e.preventDefault();
+  const name = nameInput.value.trim();
+  const comment = commentInput.value.trim();
 
-    if (name === '' || comment === '') {
-        alert('Будь ласка, заповніть усі поля!');
-        return;
-    }
+  if (name === '' || comment === '') {
+    alert('Будь ласка, заповніть усі поля!');
+    return;
+  }
 
-    const newComment = document.createElement('div');
-    newComment.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
-    commentSection.appendChild(newComment);
+  const newComment = document.createElement('div');
+  newComment.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+  commentSection.appendChild(newComment);
 
-    form.reset();
+  form.reset();
 });
+
