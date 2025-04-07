@@ -19,7 +19,8 @@
         }
     </script>
 </head>
-<script src="script.js"></script>
+<body>
+    <script src="script.js"></script>
 
 <!-- Модальне вікно -->
 <div id="modal" style="display:none; position:fixed; top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6); z-index:1000;">
@@ -30,8 +31,6 @@
   </div>
 </div>
 
-<body>
-    
     <header>
         <h1>Платформа для вивчення історії</h1>
         <nav>
@@ -42,67 +41,66 @@
             </ul>
         </nav>
     </header>
-    <script src="script.js"></script>
-</body>
-</html>
 
     <section id="timeline" class="timeline">
         <h2>Хронологія історичних подій</h2>
+        <button onclick="scrollToQuiz()">Пройти тест</button>
+
         <div class="timeline-container">
             
             <div class="timeline-item"><div class="date">1648-1657</div>
                 <div class="content"><p>Національно-визвольна війна під проводом Богдана Хмельницького</p>
-                    <img src="khmelnytsky.jpg" alt="Богдан Хмельницький"></div></div>
+                    <img src="images/khmelnytsky.jpg" alt="Богдан Хмельницький"></div></div>
     
             <div class="timeline-item"><div class="date">1914-1918</div>
                 <div class="content"><p>Перша світова війна</p>
-                    <img src="1914-1918.jpg" alt="Перша світова війна"></div></div>
+                    <img src="images/1914-1918.jpg" alt="Перша світова війна"></div></div>
                     <div class="timeline-item"><div class="date">1918</div>
         <div class="content"><p>Битва під Крутами</p>
-            <img src="kruty.jpg" alt="Битва під Крутами"></div></div>
+            <img src="images/kruty.jpg" alt="Битва під Крутами"></div></div>
     
             <div class="timeline-item"><div class="date">1921-1923</div>
                 <div class="content"><p>Перший Голодомор</p>
-                    <img src="images.jpg" alt="Перший Голодомор"></div></div>
+                    <img src="images/images.jpg" alt="Перший Голодомор"></div></div>
     
             <div class="timeline-item"><div class="date">1932-1933</div>
                 <div class="content"><p>Другий Голодомор</p>
-                    <img src="holodomor_1932.jpg" alt="Голодомор 1932-1933"></div></div>
+                    <img src="images/holodomor_1932.jpg" alt="Голодомор 1932-1933"></div></div>
     
             <div class="timeline-item"><div class="date">1939-1945</div>
                 <div class="content"><p>Друга світова війна</p>
-                    <img src="3poland.jpg" alt="Друга світова війна"></div></div>
+                    <img src="images/3poland.jpg" alt="Друга світова війна"></div></div>
     
             <div class="timeline-item"><div class="date">1946-1947</div>
                 <div class="content"><p>Третій Голодомор</p>
-                    <img src="holodomor_1946.jpg" alt="Голодомор 1946-1947"></div></div>
+                    <img src="images/holodomor_1946.jpg" alt="Голодомор 1946-1947"></div></div>
                     <div class="timeline-item"><div class="date">1986</div>
         <div class="content"><p>Чорнобильська катастрофа</p>
-            <img src="IAEA_02790015_(5613115146).jpg" alt="Чорнобильська катастрофа"></div></div>
+            <img src="images/IAEA_02790015_(5613115146).jpg" alt="Чорнобильська катастрофа"></div></div>
     
             <div class="timeline-item"><div class="date">1990</div>
                 <div class="content"><p>Революція на граніті</p>
-                    <img src="1photo.jpg" alt="Революція на граніті"></div></div>
+                    <img src="images/1photo.jpg" alt="Революція на граніті"></div></div>
     
             <div class="timeline-item"><div class="date">1991</div>
                 <div class="content"><p>Проголошення незалежності України</p>
-                    <img src="independence.jpg" alt="Незалежність України"></div></div>
+                    <img src="images/independence.jpg" alt="Незалежність України"></div></div>
     
             <div class="timeline-item"><div class="date">2004</div>
                 <div class="content"><p>Помаранчева революція</p>
-                    <img src="orange_revolution.jpg" alt="Помаранчева революція"></div></div>
+                    <img src="images/orange_revolution.jpg" alt="Помаранчева революція"></div></div>
     
             <div class="timeline-item"><div class="date">2014</div>
                 <div class="content"><p>Революція Гідності</p>
-                    <img src="maidan2014.jpg" alt="Майдан 2014"></div></div>
+                    <img src="images/maidan2014.jpg" alt="Майдан 2014"></div></div>
     
             <div class="timeline-item"><div class="date">2014</div>
                 <div class="content"><p>Російсько-українська війна</p>
-                    <img src="ukraine_war_2014.jpg" alt="Російсько-українська війна"></div></div>
+                    <img src="images/ukraine_war_2014.jpg" alt="Російсько-українська війна"></div></div>
     
             <div class="timeline-item"><div class="date">2022</div>
                 <div class="content"><p>Повномасштабне вторгнення Росії</p>
-                    <img src="ukraine_invasion_2022.jpg" alt="Вторгнення 2022"></div></div>
+                    <img src="images/ukraine_invasion_2022.jpg" alt="Вторгнення 2022"></div></div>
 
 
     
@@ -110,10 +108,10 @@
     </section>
     <section id="events">
         <h2>Історичні події</h2>
-        <button onclick="scrollToQuiz()">Пройти тест</button>
+    
         <div class="event">
             <h3>Національно-визвольна війна (1648-1657)</h3>
-            <img src="Natsionalno-vyzvolna-vijna.jpg" alt="Богдан Хмельницький">
+            <img src="images/Natsionalno-vyzvolna-vijna.jpg" alt="Богдан Хмельницький">
             <button id="btn-event1" onclick="toggleDetails('event1')">Детальніше</button>
             <p id="event1" style="display: none;">
                 Національно-визвольна війна українського народу 1648–1657 років була боротьбою 
@@ -127,7 +125,7 @@
         
         <div class="event">
             <h3>Перша світова війна (1914-1918)</h3>
-            <img src="karta-provedennja-bojovih-dij-pid-chas-pershoyi-svitovoyi-vijni.jpg" alt="Перша світова війна">
+            <img src="images/karta-provedennja-bojovih-dij-pid-chas-pershoyi-svitovoyi-vijni.jpg" alt="Перша світова війна">
             <button id="btn-event2" onclick="toggleDetails('event2')">Детальніше</button>
             <p id="event2" style="display: none;">
                 Перша світова війна (1914–1918) була глобальним збройним конфліктом між Антантою (Британія, Франція, Росія) 
@@ -141,7 +139,7 @@
 
         <div class="event">
             <h3>Бій під Крутами (16 січня 1918)</h3>
-            <img src="00591174-min-e1505162164920.jpg" alt="Бій під Крутами">
+            <img src="images/00591174-min-e1505162164920.jpg" alt="Бій під Крутами">
             <button id="btn-event3" onclick="toggleDetails('event3')">Детальніше</button>
             <p id="event3" style="display: none;">
                 Бій під Крутами (29 січня 1918) – битва між приблизно 400 українськими студентами, гімназистами та військовими курсантами проти 4-6 тисяч більшовиків.
@@ -153,7 +151,7 @@
     
         <div class="event">
             <h3>Друга світова війна (1939-1945)</h3>
-            <img src="01_interbellum.jpg" alt="Друга світова війна">
+            <img src="images/01_interbellum.jpg" alt="Друга світова війна">
             <button id="btn-event4" onclick="toggleDetails('event4')">Детальніше</button>
             <p id="event4" style="display: none;">
                 Друга світова війна (1939–1945) була наймасштабнішим збройним конфліктом в історії, що охопив майже весь світ. 
@@ -166,7 +164,7 @@
 
         <div class="event">
             <h3>Три Голодомори (1921-1923, 1932-1933, 1946-1947)</h3>
-            <img src="holodomor.jpg" alt="Голодомор">
+            <img src="images/holodomor.jpg" alt="Голодомор">
             <button id="btn-event5" onclick="toggleDetails('event5')">Детальніше</button>
             <p id="event5" style="display: none;">
                 В Україні сталося три масштабні Голодомори у XX столітті: 1921–1923, 1932–1933 та 1946–1947 років. 
@@ -180,7 +178,7 @@
 
         <div class="event">
             <h3>Чорнобильська катастрофа (26 квітня 1986)</h3>
-            <img src="unnamed.jpg" alt="Голодомор">
+            <img src="images/unnamed.jpg" alt="Голодомор">
             <button id="btn-event6" onclick="toggleDetails('event6')">Детальніше</button>
             <p id="event6" style="display: none;">
                 У 1986 році в Україні сталася найбільша техногенна катастрофа – вибух на 4-му реакторі Чорнобильської АЕС.
@@ -193,7 +191,7 @@
 
         <div class="event">
             <h3>Революція на граніті (1990)</h3>
-            <img src="43023825_2211324662243050_7912907532648054784_n.jpg" alt="Революція на граніті">
+            <img src="images/43023825_2211324662243050_7912907532648054784_n.jpg" alt="Революція на граніті">
             <button id="btn-event7" onclick="toggleDetails('event7')">Детальніше</button>
             <p id="event7" style="display: none;">
                 Революція на граніті – це студентська акція протесту в жовтні 1990 року в Києві, що стала першою масовою ненасильницькою 
@@ -206,7 +204,7 @@
     
         <div class="event">
             <h3>Проголошення незалежності України (1991)</h3>
-            <img src="zLUtyV1.jpg" alt="Незалежність України">
+            <img src="images/zLUtyV1.jpg" alt="Незалежність України">
             <button id="btn-event8" onclick="toggleDetails('event8')">Детальніше</button>
             <p id="event8" style="display: none;">
                 24 серпня 1991 року Верховна Рада України ухвалила Акт проголошення незалежності України, що стало відповіддю на загрозу 
@@ -219,7 +217,7 @@
     
         <div class="event">
             <h3>Помаранчева революція (2004)</h3>
-            <img src="pamarancheva_rev.jpg" alt="Помаранчева революція">
+            <img src="images/pamarancheva_rev.jpg" alt="Помаранчева революція">
             <button id="btn-event9" onclick="toggleDetails('event9')">Детальніше</button>
             <p id="event9" style="display: none;">
                 Помаранчева революція – це масові мирні протести в Україні наприкінці 2004 року, спричинені фальсифікаціями під час 
@@ -232,7 +230,7 @@
     
         <div class="event">
             <h3>Революція Гідності (2014)</h3>
-            <img src="maidan2014.jpg" alt="Майдан 2014">
+            <img src="images/maidan2014.jpg" alt="Майдан 2014">
             <button id="btn-event10" onclick="toggleDetails('event10')">Детальніше</button>
             <p id="event10" style="display: none;">
                 Революція Гідності (листопад 2013 – лютий 2014) – масові протести українців проти режиму Віктора Януковича, що розпочалися 
@@ -246,7 +244,7 @@
 
         <div class="event">
             <h3>Російсько-українська війна (2014 - сьогодення)</h3>
-            <img src="2014-03-09_-_Perevalne_military_base_-_0162.jpg" alt="Російсько-українська війна">
+            <img src="images/2014-03-09_-_Perevalne_military_base_-_0162.jpg" alt="Російсько-українська війна">
             <button id="btn-event11" onclick="toggleDetails('event11')">Детальніше</button>
             <p id="event11" style="display: none;">
                 осійсько-українська війна розпочалася у 2014 році з анексії Криму та агресії на Донбасі. У лютому-березні Росія, 
@@ -260,7 +258,7 @@
 
         <div class="event">
             <h3>Повномасштабне вторгнення росії в Україну (2022 - сьогодення)</h3>
-            <img src="war.png" alt="Повномасштабне вторгнення росії в україну">
+            <img src="images/war.png" alt="Повномасштабне вторгнення росії в україну">
             <button id="btn-event12" onclick="toggleDetails('event12')">Детальніше</button>
             <p id="event12" style="display: none;">
                 Повномасштабне вторгнення Росії в Україну розпочалося 24 лютого 2022 року з масованих ракетних ударів та наступу російських військ 
@@ -374,4 +372,3 @@
         </form>
         <p id="result"></p>
     </section> 
-    
