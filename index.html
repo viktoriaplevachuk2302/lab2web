@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Історична платформа</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Історична платформа</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDetails(eventId) {
+            let content = document.getElementById(eventId);
+            let button = document.getElementById("btn-" + eventId);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.innerText = "Сховати";
+            } else {
+                content.style.display = "none";
+                button.innerText = "Детальніше";
+            }
+        }
+    </script>
 </head>
 <body>
+    <script src="script.js"></script>
+    
 
 <!-- Модальне вікно -->
 <div id="modal" style="display:none; position:fixed; top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6); z-index:1000;">
@@ -16,39 +31,6 @@
     <button onclick="closeModal()">Закрити</button>
   </div>
 </div>
-
-<ul id="myList">
-  <li>Пункт 1</li>
-  <li>Пункт 2</li>
-  <li data-type="важливий">Пункт 3</li>
-  <li>Пункт 4</li>
-</ul>
-
-<button id="toggleBtn">Показати/Сховати опис</button>
-<div id="description" style="display: none;">Це додатковий опис платформи.</div>
-
-<nav>
-  <button class="nav-btn">Головна</button>
-  <button class="nav-btn">Хронологія</button>
-  <button class="nav-btn">Контакти</button>
-</nav>
-
-<p id="section">Вибери розділ</p>
-
-<h3>Залишити коментар</h3>
-<form id="commentForm">
-  <input type="text" id="name" placeholder="Ваше ім'я"><br>
-  <textarea id="comment" placeholder="Коментар"></textarea><br>
-  <button type="submit">Надіслати</button>
-</form>
-<div id="commentSection"></div>
-
-<!-- Підключення JavaScript -->
-<script src="script.js"></script>
-</body>
-</html>
-
-
 
     <header>
         <h1>Платформа для вивчення історії</h1>
