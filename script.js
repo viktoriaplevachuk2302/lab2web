@@ -7,7 +7,7 @@ const timelineEvents = [
     { date: "2022", title: "Повномасштабне вторгнення", img: "images/ukraine_invasion_2022.jpg", details: "Початок великої війни Росії проти України." }
 ];
 
-// Генерація подій на хронології
+// Генерація подій на хронології через цикл while
 const timelineContainer = document.querySelector('.timeline-container');
 let i = 0;
 while (i < timelineEvents.length) {
@@ -38,7 +38,69 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-// Перехід до тесту
+// Перехід до блоку тесту
 function scrollToQuiz() {
-    document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+    const quiz = document.getElementById('quiz');
+    if (quiz) {
+        quiz.scrollIntoView({ behavior: 'smooth' });
+    }
 }
+
+// Завдання 1: Зміна стилю елементів списку з умовною логікою
+const listItems = document.querySelectorAll('#myList li');
+for (let i = 0; i < listItems.length; i++) {
+    listItems[i].style.backgroundColor = i % 2 === 0 ? '#e0f7fa' : '#fce4ec';
+    if (listItems[i].dataset.type === 'важливий') {
+        listItems[i].style.fontWeight = 'bold';
+        listItems[i].textContent += ' (ВАЖЛИВО)';
+    }
+}
+
+// Завдання 2: Показ/сховати блок
+const toggleBtn = document.getElementById('toggleBtn');
+const description = document.getElementById('description');
+toggleBtn.addEventListener('click', () => {
+    if (description.style.display === 'none') {
+        description.style.display = 'block';
+    } else {
+        description.style.display = 'none';
+    }
+});
+
+// Завдання 2: Обробка кнопок навігації
+const navButtons = document.querySelectorAll('.nav-btn');
+const section = document.getElementById('section');
+navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        section.textContent = `Ви обрали: ${btn.textContent}`;
+    });
+    btn.addEventListener('mouseover', () => {
+        btn.style.backgroundColor = '#ffd54f';
+    });
+    btn.addEventListener('mouseout', () => {
+        btn.style.backgroundColor = '';
+    });
+});
+
+// Завдання 3: Коментарі
+const form = document.getElementById('commentForm');
+const nameInput = document.getElementById('name');
+const commentInput = document.getElementById('comment');
+const commentSection = document.getElementById('commentSection');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = nameInput.value.trim();
+    const comment = commentInput.value.trim();
+
+    if (name === '' || comment === '') {
+        alert('Будь ласка, заповніть усі поля!');
+        return;
+    }
+
+    const newComment = document.createElement('div');
+    newComment.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+    commentSection.appendChild(newComment);
+
+    form.reset();
+});
