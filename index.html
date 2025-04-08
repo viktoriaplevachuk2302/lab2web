@@ -35,8 +35,7 @@
     </p>
 </section>
 
-<!-- JS код — обовʼязково в самому кінці перед </body> -->
-<script>
+    <script>
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
     }
@@ -47,8 +46,8 @@
         document.getElementById('modal').style.display = 'block';
     }
 
-    // Кнопка опису платформи
     window.onload = function () {
+        // Кнопка опису платформи
         const toggleBtn = document.getElementById("toggleBtn");
         const description = document.getElementById("description");
 
@@ -61,11 +60,33 @@
                 toggleBtn.textContent = "Показати опис платформи";
             }
         });
+
+        // Додаємо scrollToQuiz всередину onload
+        window.scrollToQuiz = function () {
+            const quiz = document.getElementById("quiz");
+            if (quiz) {
+                quiz.scrollIntoView({ behavior: "smooth" });
+            } else {
+                alert("Секцію тесту не знайдено!");
+            }
+        };
     };
 </script>
+
     <section id="timeline" class="timeline">
         <h2>Хронологія історичних подій</h2>
         <button onclick="scrollToQuiz()">Пройти тест</button>
+        <script>
+    function scrollToQuiz() {
+        const quiz = document.getElementById("quiz");
+        if (quiz) {
+            quiz.scrollIntoView({ behavior: "smooth" });
+        } else {
+            alert("Секцію тесту не знайдено!");
+        }
+    }
+</script>
+
 
         <div class="timeline-container">
             
